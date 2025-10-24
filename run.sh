@@ -8,10 +8,10 @@ python train.py \
     --do_eval \
     --bf16 \
     --prediction_loss_only True \
-    --per_device_train_batch_size 8 \
-    --per_device_eval_batch_size 8 \
-    --gradient_accumulation_steps 2 \
-    --max_steps 4000 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 2 \
+    --gradient_accumulation_steps 8 \
+    --max_steps 3500 \
     --learning_rate 1e-5 \
     --weight_decay 0.01 \
     --lr_scheduler_type cosine \
@@ -23,7 +23,7 @@ python train.py \
     --metric_for_best_model loss \
     --greater_is_better False \
     --eval_strategy steps \
-    --eval_steps 50 \
+    --eval_steps 100 \
     --eval_on_start \
     --logging_strategy steps \
     --logging_steps 10 \
