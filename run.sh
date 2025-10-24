@@ -10,8 +10,8 @@ python train.py \
     --prediction_loss_only True \
     --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 8 \
-    --gradient_accumulation_steps 4 \
-    --max_steps 2000 \
+    --gradient_accumulation_steps 2 \
+    --max_steps 4000 \
     --learning_rate 1e-5 \
     --weight_decay 0.01 \
     --lr_scheduler_type cosine \
