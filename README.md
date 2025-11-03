@@ -1,7 +1,9 @@
 # Qwen Fine-tuning
 
+Just a simple example of fine-tuning Qwen on WMT data.
+
 ## Environments
-I use python=3.11 and the latest Huggingface, Pytorch versions.
+I use python=3.11 and the latest Huggingface, Pytorch.
 ```shell
 conda create -n qwen_ft python=3.11
 conda activate qwen_ft
@@ -11,15 +13,6 @@ pip install tensorboardX==2.6.4 tensorboard==2.20.0
 ```
 
 ## Files
-- `./env.sh`: In order to run on my cluster, I have a list of environments to set up.
-The most important lines are the last two lines, which activates the conda environment and
-set up the huggingface cache directory.
-The pre-trained model checkpoint and the dataset will be saved to `HF_HOME`.
-So, ideally, everyone could share one copy of pre-trained model and data. Saves disk space bit.
-```shell
-conda activate xxx
-export HF_HOME=xxx
-```
 - `demo.py`: for interaction. Load either the pre-trained model or the fine-tuned model, and 
 let the model translate an input sentence.
 - `train.py`: the actual fine-tuning code. Use `run.sh` to launch it.
